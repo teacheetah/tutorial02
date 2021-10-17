@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  backend:
+    image: backend:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+      - 8002:8000
+    volumes:
+      - ./app.py:/teacheetah/app.py
+
